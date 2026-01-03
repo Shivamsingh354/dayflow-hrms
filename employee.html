@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Dayflow Employee Dashboard</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<div class="layout">
+
+  <!-- SIDEBAR -->
+  <aside class="sidebar collapsed" id="sidebar">
+    <div class="hamburger" onclick="toggleSidebar()">☰</div>
+
+    <ul class="menu">
+      <li class="menu-item active">
+        <span class="icon">👤</span>
+        <span class="text">Profile</span>
+      </li>
+      <li class="menu-item">
+        <span class="icon">🕒</span>
+        <span class="text">Attendance</span>
+      </li>
+      <li class="menu-item">
+        <span class="icon">📝</span>
+        <span class="text">Leave Requests</span>
+      </li>
+      <li class="menu-item logout">
+        <span class="icon">🚪</span>
+        <span class="text">Logout</span>
+      </li>
+    </ul>
+  </aside>
+
+  <!-- MAIN CONTENT -->
+  <main class="main">
+
+    <h1>Welcome, <span id="empName">Loading...</span> 👋</h1>
+
+    <div class="stats">
+      <div class="stat">Attendance <span>Present</span></div>
+      <div class="stat">Leaves Used <span>2</span></div>
+      <div class="stat">Work Time <span>6.1h</span></div>
+      <div class="stat">Output <span>Good</span></div>
+    </div>
+
+    <div class="grid">
+
+      <div class="box profile">
+        <img src="https://via.placeholder.com/120" alt="Profile">
+        <h3 id="profileName">Loading...</h3>
+        <p id="profileRole">Loading...</p>
+      </div>
+
+      <div class="box">
+        <h3>Process</h3>
+        <p><b>6.1h</b> Work time this week</p>
+        <div class="bars">
+          <span></span><span></span><span class="active"></span><span></span><span></span>
+        </div>
+      </div>
+
+      <div class="box center">
+        <h3>Time Tracker</h3>
+        <div class="circle">02:35</div>
+      </div>
+
+      <div class="box dark">
+        <h3>Onboarding</h3>
+        <p>2 / 8 Tasks</p>
+        <ul>
+          <li>Interview</li>
+          <li>Team Meeting</li>
+          <li>Project Update</li>
+          <li>Policy Review</li>
+        </ul>
+      </div>
+
+      <div class="box">
+        <h3>Attendance</h3>
+        <button onclick="checkIn()">Check In</button>
+        <button onclick="checkOut()">Check Out</button>
+      </div>
+
+      <div class="box">
+        <h3>Leave Requests</h3>
+        <p>Apply & track your leaves</p>
+      </div>
+
+    </div>
+
+  </main>
+</div>
+
+<script src="js/employee.js"></script>
+</body>
+</html>
